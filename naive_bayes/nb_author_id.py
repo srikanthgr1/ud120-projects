@@ -31,7 +31,7 @@ clf = GaussianNB()
 #clf.fi
 clf.fit(features_train,labels_train)
 clf.predict(features_test)
-clf.score(features_test,labels_test)
+print(clf.score(features_test,labels_test))
 #########################################################
 
 
