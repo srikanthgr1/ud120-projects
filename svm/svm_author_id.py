@@ -36,19 +36,23 @@ that matrix should be an array of shape (n_samples, n_samples)
 gamma : float, optional (default=’auto’)
 Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’. 
 If gamma is ‘auto’ then 1/n_features will be used instead.
-
-
 '''
+
+#features_train = features_train[:round(len(features_train)/100)] 
+#labels_train = labels_train[:round(len(labels_train)/100)]
+
 t0 = time()
-knl = "linear"
-opt = svm.SVC(C=1.0,  kernel=knl)
+knl = "rbf" 
+cval = 10000.0
+# Change the kernel value to others and also play with the C, gamma values in SVC method
+opt = svm.SVC(C= cval,kernel=knl)
 opt.fit(features_train, labels_train)
-print("SVM training Time with Kernel as " ,knl.title() ," is", round(time()-t0, 3))
+print("SVM training Time with Kernel as " ,knl.title() ," and C value as", cval,"is", round(time()-t0, 3))
 
 t1 = time()
 pred_features_test = opt.predict(features_test)
-print("SVM Prediction Time with Kernel as " ,knl.title() ," is", round(time()-t1, 3))
-print("The Accuracy of SVM on Authors is ", opt.score(features_test,labels_test))
+print("SVM Prediction Time with Kernel as " ,knl.title() ," and C value as", cval,"is",  round(time()-t1, 3))
+print("The Accuracy of SVM on Predicting Authors with Kernel as" ,knl.title() ,"and C value as", cval,"is"   , opt.score(features_test,labels_test))
 
 
 #########################################################
