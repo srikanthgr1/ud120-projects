@@ -17,9 +17,12 @@ def classify(features_train, labels_train):
     
     from sklearn.naive_bayes import GaussianNB  
     from sklearn import svm
+    from time import time
 #    opt = GaussianNB()
 #    opt.fit(features_train,labels_train )
-    opt = svm.SVC(C=10000.0,  kernel='rbf', gamma=1000.0)
-    opt.fit(features_train, labels_train)  
-     
+    t0 = time()
+    knl = "rbf"
+    opt = svm.SVC(C=10000.0,  kernel=knl, gamma=1000.0)
+    opt.fit(features_train, labels_train)
+    print("SVM training Time with Kernel as " ,knl.title() ," is", round(time()-t0, 3))
     return opt
