@@ -21,13 +21,17 @@ from email_preprocess import preprocess
 ### labels_train and labels_test are the corresponding item labels
 features_train, features_test, labels_train, labels_test = preprocess()
 
-
+#print(features_train.count())
 
 
 #########################################################
 ### your code goes here ###
-
-
+from sklearn.naive_bayes import GaussianNB
+clf = GaussianNB()
+#clf.fi
+clf.fit(features_train,labels_train)
+clf.predict(features_test)
+clf.score(features_test,labels_test)
 #########################################################
 
 

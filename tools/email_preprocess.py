@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
-import pickle
-import cPickle
+import _pickle as pickle
+import _pickle as cPickle
 import numpy
 
 from sklearn import cross_validation
