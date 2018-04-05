@@ -1,0 +1,16 @@
+Algorithms to Chose 
+
+1) K nearest Neighbours - Simple , classic and easy to understand 
+
+2) adaboost 
+3) random forest 
+both are ensemble algos 
+
+Process 
+1) Do some research on the algorithm
+     	---- Get General understanding
+	---- Explain it to a friend 
+2) find sklearn documentation
+3) Deploy it based on sampel code from Sklearn 
+4) Make predictions 
+5) Evaluate it 

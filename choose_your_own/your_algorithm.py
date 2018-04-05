@@ -1,11 +1,8 @@
 #!/usr/bin/python
-import sys
+
 import matplotlib.pyplot as plt
 from prep_terrain_data import makeTerrainData
 from class_vis import prettyPicture
-
-import numpy as np
-import pylab as pl
 
 features_train, labels_train, features_test, labels_test = makeTerrainData()
 
@@ -33,32 +30,3 @@ plt.show()
 
 ### your code here!  name your classifier object clf if you want the 
 ### visualization code (prettyPicture) to show you the decision boundary
-
-
-#### your code goes here
-
-
-from sklearn import tree
-from sklearn.metrics import accuracy_score
-# clf = tree.DecisionTreeClassifier()
-
-clf1 = tree.DecisionTreeClassifier(min_samples_split = 2)
-clf1 = clf1.fit(features_train, labels_train)
-pred1 = clf1.predict(features_test)
-acc_min_samples_split_2 = accuracy_score(labels_test,pred1 )
-
-
-clf2 = tree.DecisionTreeClassifier(min_samples_split = 50)
-clf2 = clf2.fit(features_train, labels_train)
-pred2 = clf2.predict(features_test)
-acc_min_samples_split_50 = accuracy_score(labels_test,pred2 )
-
-
-
-
-try:
-    prettyPicture(clf, features_test, labels_test)
-except NameError:
-    pass
-
-print("acc_min_samples_split_2",round(acc_min_samples_split_2,3),"acc_min_samples_split_50",round(acc_min_samples_split_50,3))

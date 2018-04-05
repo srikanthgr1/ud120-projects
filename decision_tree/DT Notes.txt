@@ -1,0 +1,29 @@
+1) Entropy 
+measure of impurity in the data 
+Controls the way the decision tree decides to split the tree
+
+Car params : bumpiness and grade
+add another variable speed limit 
+
+Formula for Entrophy 
+
+entrophy = Sum(-Pi log 2 (Pi)) for i from 1 .. n 
+
+pi = fraction of example in class i
+
+entrophy is opposite of purity 
+
+objects of Same Class -> entrophy=0
+if objects are diffn class entrophy will take max math value of 1 
+
+(-0.5 * log 2(0.5)) + (-0.5 * log 2(0.5))  = 1
+
+2 ) Information Gain 
+information gain = entrophy(parent) - [weighted Average] * entropy(children)
+
+
+Make the Split based on which variable gives the best information gain 
+Higher the information gain, Split on that attrib
+
+
+
