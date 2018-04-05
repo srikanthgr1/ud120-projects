@@ -60,5 +60,3 @@ try:
     prettyPicture(clf, features_test, labels_test)
 except NameError:
     pass
-
-print("acc_min_samples_split_2",round(acc_min_samples_split_2,3),"acc_min_samples_split_50",round(acc_min_samples_split_50,3))

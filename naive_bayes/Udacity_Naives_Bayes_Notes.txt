@@ -1,0 +1,82 @@
+Students = 30 
+Split on Class
+
+Entrophy Formula
+
+- plol2(p) - qlog2(q)
+= - p log2(p) - (1-p) log2(1-p)
+
+= - (15/30)log2(15/30) - ( 15/30) log2(15/30)
+
+Bayes Rule 
+Prior probability * Test Evidence = Posterior Probability 
+
+P(H|E) = ( P(E|H) * P(H) ) / P(E)
+
+
+P(60+ minutes | public transportation)
+
+= P( public transportation | 60+ minutes) * P(60+ minutes)
+-----------------------------------
+P(public transportation)
+
+= 108/329 * 371/3198
+---------------------  = 0.10287
+329/3198
+
+.05
+
+.04
+
+NAIVES BAYES Mini Project
+
+1) Who was the Author of the email ?
+
+
+SVM 
+
+Features 
+
+Linearly Separable 
+Inputs (x,y) --> SVM --> Labels
+
+Input( x, y, x^2 + y^2) --> SVM --> labels
+
+z = x^2 + y^2 
+
+AddFeatures 
+
+1) x^2 + y^2 
+2) |x| -> absolute value of X depending on placement of data 
+
+3) Take the best division linear line b/w data , Apply Kernel trick in high dimensional space
+You will getr a line to sep arate nonlinear data 
+
+KERNELS 
+Linear
+poly
+rbf
+precomputed
+callable
+---------------------------
+Parameters in ML 
+
+Parameters in SVM --
+kernel
+C
+gamma
+
+Play with Values of C, kernel and gamma 
+
+Kernel = linear -- produces a linear cut 
+
+C = Control Value -- Increase in C value ( numerial) will lead to the Coverage of more training points i.e. tends more towards overfit scenario
+
+gamma - tends to break the data regions into multiple Suppoert Vector planes and does classification . higher the value greate to Overfit 
+
+Value of C and gamma can be visualized using the kernel value = rbf 
+
+
+Hopefully it’s becoming clearer what Sebastian meant when he said Naive Bayes is great for text--it’s faster and generally gives better performance than an SVM for this particular problem. Of course, there are plenty of other problems where an SVM might work better. Knowing which one to try when you’re tackling a problem for the first time is part of the art and science of machine learning. In addition to picking your algorithm, depending on which one you try, there are parameter tunes to worry about as well, and the possibility of overfitting (especially if you don’t have lots of training data).
+
+Our general suggestion is to try a few different algorithms for each problem. Tuning the parameters can be a lot of work, but just sit tight for now--toward the end of the class we will introduce you to GridCV, a great sklearn tool that can find an optimal parameter tune almost automatically.
