@@ -14,3 +14,9 @@ Process
 3) Deploy it based on sampel code from Sklearn 
 4) Make predictions 
 5) Evaluate it 
+
+
+I chose 2 models
+k nn
+Random Forest 
+Accuracy for knn = 94%  for n=1, distance = weight
